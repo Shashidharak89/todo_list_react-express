@@ -10,7 +10,7 @@ export const Todolist = ({ props, setupdate }) => {
 
   const deletetodo = () => {
     axios
-      .delete("http://localhost:3000/mytodo/api/v1/todos/" + props._id)
+      .delete("https://todo-list-backend-4k0g.onrender.com/mytodo/api/v1/todos/" + props._id)
       .then((res) => {
         setupdate((val) => !val);
       })
@@ -19,7 +19,7 @@ export const Todolist = ({ props, setupdate }) => {
 
   useEffect(() => {
     axios
-      .put("http://localhost:3000/mytodo/api/v1/todos/" + props._id, {
+      .put("https://todo-list-backend-4k0g.onrender.com/mytodo/api/v1/todos/" + props._id, {
         completed: completed,
       })
       .then((res) => {
