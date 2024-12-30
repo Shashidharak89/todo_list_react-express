@@ -9,7 +9,7 @@ export default function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/mytodo/api/v1/todos")
+      .get("https://todo-list-backend-4k0g.onrender.com/mytodo/api/v1/todos")
       .then((res) => {
         console.log("fetched ", res.data);
         settitle("");
@@ -21,7 +21,7 @@ export default function App() {
 
   const posttodo = () => {
     axios
-      .post("http://localhost:3000/mytodo/api/v1/todos", {
+      .post("https://todo-list-backend-4k0g.onrender.com/mytodo/api/v1/todos", {
         title,
         description: desc,
       })
